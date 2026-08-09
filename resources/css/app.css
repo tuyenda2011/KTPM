@@ -1,0 +1,259 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f0f2f5;
+}
+
+/* Header */
+header{
+    background:#3b82f6;
+    color:#fff;
+    border-bottom:1px solid #1e40af;
+}
+
+.header-title{
+    font-size:1.875rem;
+    font-weight:bold;
+}
+
+/* Avatar + user */
+.avatar{
+    background:#3b82f6;
+    color:#fff;
+}
+
+.avatar-name,
+.user-section,
+.header-subtitle,
+.menu-toggle,
+.dropdown-arrow{
+    color:#fff;
+}
+
+.menu-toggle-bar{
+    background:#fff;
+}
+
+.dropdown-logout{
+    color:#dc3545;
+}
+
+/* Sidebar menu trái */
+.sidebar{
+    width:200px;
+    background:#3b82f6;
+    border-right:1px solid #1e40af;
+}
+
+/* Item menu */
+.menu-item{
+    display:flex;
+    align-items:center;
+    color:#fff;
+    border-bottom:1px solid #1e40af;
+    transition:.3s;
+}
+
+.menu-item:hover,
+.menu-item.active{
+    background:#1e40af;
+}
+
+/* Layout chính */
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* Sidebar nhân viên */
+.sidebar select,
+.sidebar input{
+    width:100%;
+    padding:6px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+.employee-list{
+    flex:1;
+    overflow-y:auto;
+}
+
+.employee-list li{
+    display:flex;
+    align-items:center;
+    padding:8px;
+    border-bottom:1px solid #eee;
+    cursor:pointer;
+}
+
+.employee-list li:hover{
+    background:#f5f5f5;
+}
+
+.employee-list img{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+/* Badge */
+.badge{
+    padding:2px 6px;
+    border-radius:4px;
+    font-size:12px;
+    font-weight:bold;
+    color:#fff;
+}
+
+.dang-lam{ background:#28a745; }
+.tam-nghi{ background:#ffc107; color:#212529; }
+.nghi-viec{ background:#dc3545; }
+
+/* Main content */
+.main{
+    flex:1;
+    padding:20px;
+    background:#fff;
+    overflow-y:auto;
+}
+
+/* Thông tin nhân viên */
+.detail-top{
+    display:flex;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.detail-top img{
+    width:150px;
+    height:180px;
+    border:1px solid #ccc;
+    object-fit:cover;
+}
+
+.detail-form{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.detail-form input,
+.detail-form select{
+    width:100%;
+    padding:6px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+/* Tabs */
+.tabs{
+    display:flex;
+    flex-wrap:wrap;
+    border-bottom:1px solid #ddd;
+    margin-top:20px;
+}
+
+.tabs button{
+    padding:10px 15px;
+    border:none;
+    cursor:pointer;
+    background:#f1f1f1;
+}
+
+.tabs button.active{
+    background:#007bff;
+    color:#fff;
+}
+
+/* ============== Authentication Styles ============== */
+
+/* Gradient backgrounds */
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Card containers */
+.login-card,
+.register-card,
+.reset-card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Input fields */
+.input-field {
+    transition: all 0.3s;
+}
+
+.input-field:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+/* Button styles */
+.login-btn,
+.register-btn,
+.reset-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: all 0.3s;
+}
+
+.login-btn:hover,
+.register-btn:hover,
+.reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Logo text gradient */
+.logo-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Step indicator */
+.step-indicator {
+    transition: all 0.3s;
+}
+
+.step-indicator.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.step-indicator.completed {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+}
+
+/* Password strength bar */
+.password-strength {
+    height: 4px;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.strength-weak {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.strength-medium {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.strength-strong {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
