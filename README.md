@@ -37,20 +37,34 @@ Hệ thống được xây dựng nhằm số hóa và tự động hóa quy tr�
 **Luồng nghiệp vụ chính:**
 
 ```mermaid
-flowchart LR
-    A([🌐 Ứng viên]) -->|Xem tin & nộp CV| B[/Hệ thống tiếp nhận/]
-    B -->|Push notification| C{📬 HR xem xét}
-    C -->|Đủ điều kiện| D[📅 Lên lịch phỏng vấn]
-    C -->|Không đủ| E([❌ Từ chối])
-    D --> F[🎤 Phỏng vấn]
-    F -->|Đạt| G[✅ Quyết định tuyển dụng]
-    F -->|Không đạt| E
-    G -->|Admin promote| H([👔 Nhân viên chính thức])
+flowchart TD
+    A(["🌐  Ứng viên\n━━━━━━━━━━━━━━\nTruy cập hệ thống"])
+    B["📋  Xem danh sách\ntin tuyển dụng"]
+    C["📄  Điền thông tin\n& tải lên CV"]
+    D[/"💾  Hệ thống lưu hồ sơ\n& gửi thông báo cho HR"/]
+    E{"🔍  HR xem xét\nhồ sơ ứng viên"}
+    F["📅  Lên lịch\nphỏng vấn"]
+    G(["❌  Từ chối\nhồ sơ"])
+    H["🎤  Tiến hành\nphỏng vấn"]
+    I{"📊  Đánh giá\nkết quả"}
+    J["✅  Quyết định\ntuyển dụng"]
+    K(["👔  Nhân viên\nchính thức"])
 
-    style A fill:#3b82f6,color:#fff,stroke:none
-    style H fill:#10b981,color:#fff,stroke:none
-    style E fill:#ef4444,color:#fff,stroke:none
-    style G fill:#f59e0b,color:#fff,stroke:none
+    A --> B --> C --> D --> E
+    E -->|"✔ Đủ điều kiện"| F
+    E -->|"✘ Không phù hợp"| G
+    F --> H --> I
+    I -->|"✔ Đạt yêu cầu"| J
+    I -->|"✘ Không đạt"| G
+    J -->|"Admin promote"| K
+
+    style A fill:#2563eb,color:#fff,stroke:none,rx:20
+    style K fill:#059669,color:#fff,stroke:none,rx:20
+    style G fill:#dc2626,color:#fff,stroke:none,rx:20
+    style D fill:#7c3aed,color:#fff,stroke:none
+    style E fill:#d97706,color:#fff,stroke:none
+    style I fill:#d97706,color:#fff,stroke:none
+    style J fill:#0891b2,color:#fff,stroke:none
 ```
 
 ---
